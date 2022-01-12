@@ -34,6 +34,11 @@ const shoppingList = Object.freeze([
     {itemName: "white pepper", shop: "Whole Foods", price: 1.99}, //4
 ])
 
+shoppingList[0] = 10
+
+shoppingList[0].itemName="Test"
+console.log(shoppingList)
+
 const newYearFeast = [...shoppingList, {itemName: "Wagyu steak", shop: "Whole Foods", price: 200}]
 console.log(newYearFeast)
 
