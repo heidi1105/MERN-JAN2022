@@ -16,15 +16,19 @@ function App() {
 
   return (
     <div className="App">
-      <Container >
+      {/* <Container >
         <Header />
-      </Container>
+        <Display>
+          <Footer />
+          <Button />
+        </Display>
+      </Container> */}
 
       
 
       {/* <Pet pet={pepper} /> */}
-      {/* <Main firstname="Heidi" lastname="Chen" weight={100} abilities={["debugging", "create random names", "break my own code"]}/>
-      <Main firstname="Heidi2" lastname="Chen2" weight={102} abilities={["debugging2", "create random names2", "break my own code twice"]}/> */}
+      <Main firstname="Heidi" lastname="Chen" weight={100} abilities={["debugging", "create random names", "break my own code"]}/>
+      <Main firstname="Heidi2" lastname="Chen2" weight={102} abilities={["debugging2", "create random names2", "break my own code twice"]}/>
     </div>
   );
 }
