@@ -48,6 +48,7 @@ const CombinedForm = () => {
     const submitHandler = (e) => {
         e.preventDefault()
         if(!errHandler()){
+            console.log("connecting to database and create user")
             console.log(formState)
             clearForm()
             setHasBeenSubmitted(true)
@@ -76,6 +77,7 @@ const CombinedForm = () => {
         formState.email.length < 2 ? (errCheck.email = true) : errCheck.email = false
         formState.hasPet === undefined ? (errCheck.hasPet = true) : errCheck.hasPet = false
         typeof formState.advertising === "boolean" ? (errCheck.advertising = true) : errCheck.advertising = false
+        // generated errCheck ={ username:true, email:false, password: true}
         setErrForm(errCheck)
         return (errCheck.username || errCheck.password ||errCheck.email) // if any of the items is true, return true
     }
