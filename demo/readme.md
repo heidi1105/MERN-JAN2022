@@ -17,13 +17,13 @@
 4. attach onSubmit = {submitHandler} for <form> tag
 
 ### Grab API (axios)
-axios.get(`URL`)
+`axios.get(`URL`)
 	.then(res=> {
 		//successful, work with the res (usually.. res.data)
 	})
 	.catch(err=>{
 		//unsuccessful , got the error in the URL
-	})
+	})`
 
 ### useEffect (Do the function when the page loads)
 useEffect(()=>{
