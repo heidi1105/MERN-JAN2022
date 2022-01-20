@@ -32,7 +32,7 @@ useEffect(()=>{
 
 
 ## ROUTER
-####app.js
+#### app.js
 import {BrowserRouter, Link, Switch, Route } from "react-router-dom"
 
 	<BrowserRouter>
