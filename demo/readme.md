@@ -28,10 +28,11 @@ axios.get(`URL`)
 ```
 
 ### useEffect (Do the function when the page loads)
+```
 useEffect(()=>{
 	// whatever you want to do when the page is loaded
 },[]) --> if the variable inside the array changed, useEffect will run the function again
-
+```
 
 ## ROUTER
 #### app.js
