@@ -1,4 +1,4 @@
-#React project
+# React project
 Step 1: npx create-react-app your-project-name
 Step 2: go into the project, install dependencies (npm install axios react-router-dom@5)
 Step 3: npm start (to make sure the server is running)
@@ -7,8 +7,8 @@ Step 4: Understand the components you need. Create all the components (rafce for
 ***** views are the parent companents for each wireframe, components are the children components
 Step 5: start changing app.js to display components
 
-##FORMS
-###INPUT
+## FORMS
+### INPUT
 1. add state variable for the input (const [name, setName] =  useState(""))
 2. onChange for the input (onChange = {e=> setName(e.target.value)})
 SUBMIT
