@@ -14,7 +14,7 @@
 
 ### SUBMIT
 3. add submitHandler  (with e.preventDefault())
-4. attach onSubmit = {submitHandler} for <form> tag
+4. attach onSubmit = { submitHandler } for <form> tag
 
 ### Grab API (axios)
 ```
@@ -31,11 +31,13 @@ axios.get(`URL`)
 ```
 useEffect(()=>{
 	// whatever you want to do when the page is loaded
-},[]) --> if the variable inside the array changed, useEffect will run the function again
+},[])
 ```
+If the variable inside the array changed, useEffect will run the function again
 
 ## ROUTER
 #### app.js
+```
 import {BrowserRouter, Link, Switch, Route } from "react-router-dom"
 
 	<BrowserRouter>
@@ -49,22 +51,24 @@ import {BrowserRouter, Link, Switch, Route } from "react-router-dom"
 			</Route> 
 		</Switch>
 	</BrowserRouter>
-
+```
 1. Link -- similar to a tag
 2. Switch -- if/else statement.. if it fits the first, go to the first
 3. Route -- if the path fits, render the component
 
 
 #### To grab params , inside component
+```
 import {useParams} from "react-router-dom"
+
 const {keyword} = useParams{}
-
+```
 #### To redirect  
-
+```
 import {useHistory} from "react-router-dom"
 const history = useHistory()
 
 history.push("REDIRECT URL")
 
-
+```
 
