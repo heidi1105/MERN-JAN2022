@@ -57,7 +57,7 @@ import {BrowserRouter, Link, Switch, Route } from "react-router-dom"
 3. Route -- if the path fits, render the component
 
 
-#### To grab params , inside component
+#### To grab the params , inside component
 ```
 import {useParams} from "react-router-dom"
 
