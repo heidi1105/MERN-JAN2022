@@ -36,16 +36,21 @@ useEffect(()=>{
 import {BrowserRouter, Link, Switch, Route } from "react-router-dom"
 
 	<BrowserRouter>
-		<Link to ="/about"> About </Link>   --> similar to <a href=""> </a>
-		<Switch>  --> if/else statement.. if it fits the first, go to the first
-			<Route path="/about">   --> when the path fits "/about", render <About/> component
+		<Link to ="/about"> About </Link>  
+		<Switch>  
+			<Route path="/about">  
 				<About />  
 			</Route> 
-			<Route path="/:keyword">   --> when the path fits "/anythingYouType", render <Keyword/> component
+			<Route path="/:keyword">  
 				<Keyword />  
 			</Route> 
 		</Switch>
 	</BrowserRouter>
+
+1. Link -- similar to a tag
+2. Switch -- if/else statement.. if it fits the first, go to the first
+3. Route -- if the path fits, render the component
+
 
 #### To grab params , inside component
 import {useParams} from "react-router-dom"
