@@ -3,15 +3,16 @@
 2. go into the project, install dependencies (npm install axios react-router-dom@5)
 3. npm start (to make sure the server is running)
 4. Understand the components you need. Create all the components (rafce for the backbone of the components)
-***** create /views folder and /components folder
-***** views are the parent companents for each wireframe, components are the children components
+	- create /views folder and /components folder
+	- views are the parent companents for each wireframe, components are the children components
 5. start changing app.js to display components
 
 ## FORMS
 ### INPUT
 1. add state variable for the input (const [name, setName] =  useState(""))
 2. onChange for the input (onChange = {e=> setName(e.target.value)})
-SUBMIT
+
+### SUBMIT
 3. add submitHandler  (with e.preventDefault())
 4. attach onSubmit = {submitHandler} for <form> tag
 
