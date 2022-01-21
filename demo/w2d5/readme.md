@@ -22,16 +22,16 @@
 
 ### Update
 - `db.item.update({}, {$addToSet:{shops: ["BestBuy","Amazon", "Walmart"]}})` : Only update one item
-- `db.item.updateMany({}, {$addToSet:{shops: ["BestBuy","Amazon", "Walmart"]}})`
-- `db.item.update({name:"games"}, {$push: {shops: 'gamestop'}})`
-- `db.item.update({name:"games"}, {$pull: {shops: 'gamestop'}})`
-- `db.item.updateMany({}, {$set: {rating: 10}})`
-- `db.item.updateMany({}, {$inc: {rating: 1}})`
-- `db.item.updateMany({}, {$rename: {'rating': 'stock'}})`
+- `db.item.updateMany({}, {$addToSet:{shops: ["BestBuy","Amazon", "Walmart"]}})` : Update multiple items
+- `db.item.update({name:"games"}, {$push: {shops: 'gamestop'}})` : add to array
+- `db.item.update({name:"games"}, {$pull: {shops: 'gamestop'}})` : remove from array
+- `db.item.updateMany({}, {$inc: {price: 1}})` : increment 
+- `db.item.updateMany({}, {$rename: {'rating': 'stock'}})` : renaming the name of the field
 - 
 
 ### Delete
-- `db.item.deleteMany({price: {$gt: 100}})`
+- both .remove, .deleteOne, .deleteMany work
+- `db.item.deleteMany({price: {$gt: 100}})` 
 - `db.item.deleteOne({})`
 - `db.item.updateMany({}, [{$unset: ['stock']}])`
 
@@ -45,4 +45,3 @@
 
 - $unset removes the column
 
-- $set adds to set
