@@ -1,5 +1,5 @@
 # MongoDB SHELL command
 ### Database
-`show dbs`
+``show dbs``
 showing all database
 `use firstDB` : create & switch to the db
