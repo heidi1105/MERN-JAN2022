@@ -4,16 +4,9 @@ const app = express()
 const port = 8000
 const faker = require('@faker-js/faker')
 
-let shoppingList=[
-    {itemName: "rice cooker", shop: "Amazon", price: 120},  //0
-    {itemName: "monitor", shop: "Amazon", price: 20}, //1
-    {itemName: "ps5", shop: "BestBuy", price: 500}, //2
-    {itemName: "wetfood", shop: "PetSmart", price: 1.29}, //3
-    {itemName: "white pepper", shop: "Whole Foods", price: 1.99}, //4
-]
 
 
-// make sure these lines are above any app.get or app.post code blocks
+// 1.1 SETUP FOR POST METHOD
 app.use( express.json() );
 app.use( express.urlencoded({ extended: true }) );
 
