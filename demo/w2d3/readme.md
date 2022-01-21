@@ -14,7 +14,7 @@
 
 ### SUBMIT
 3. add submitHandler  (with e.preventDefault())
-4. attach onSubmit = { submitHandler } for <form> tag
+4. attach onSubmit = { submitHandler } for form tag
 
 ### Grab API (axios)
 ```
@@ -61,7 +61,7 @@ import {BrowserRouter, Link, Switch, Route } from "react-router-dom"
 ```
 import {useParams} from "react-router-dom"
 
-const {keyword} = useParams{}
+const {keyword} = useParams()
 ```
 #### To redirect  
 ```
