@@ -10,7 +10,9 @@
 - `db.item.drop()` : drop a table
 
 ### Documents (Fields)
-- `db.item.insert({name: "TV", price: 899, size:{length: 60, height: 50}})` 
+- `db.item.insert([{name: "TV", price: 899, size:{length: 60, height: 50}})` 
+- `db.item.insertMany([{name: "TV2", price: 899, size:{length: 60, height: 50}},{name: "TV3", price: 899, size:{length: 60, height: 50}}])` 
+- insertMany allows you to add multiple items
 
 
 ### Retreive Data from dbs
@@ -22,7 +24,7 @@
 
 ### Update
 - `db.item.update({}, {$addToSet:{shops: ["BestBuy","Amazon", "Walmart"]}})` : Only update one item
-- `db.item.updateMany({}, {$addToSet:{shops: {$each:["BestBuy","Amazon", "Walmart"]}}})` : Update multiple items
+- `db.item.updateMany({}, {$addToSet:{shops: {$each:["BestBuy","Amazon", "Walmart"]}}})` : Update multiple items by adding an array of shops using $each 
 - `db.item.update({name:"games"}, {$push: {shops: 'gamestop'}})` : add to array
 - `db.item.update({name:"games"}, {$pull: {shops: 'gamestop'}})` : remove from array
 - `db.item.updateMany({}, {$inc: {price: 1}})` : increment 
@@ -33,7 +35,7 @@
 - both .remove, .deleteOne, .deleteMany work
 - `db.item.deleteMany({price: {$gt: 100}})` 
 - `db.item.deleteOne({})`
-- `db.item.updateMany({}, [{$unset: ['stock']}])`
+- `db.item.updateMany({}, [{$unset: ['stock']}])` :$unset removes the column
 
 
 ## REMARKS
@@ -41,7 +43,4 @@
 
 - $addToSet adds just unique items, but the order of items is not guaranteed.
 
-- remove, deleteOne and findOneAndDelete all works.
-
-- $unset removes the column
 
