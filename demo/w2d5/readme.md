@@ -22,7 +22,7 @@
 
 ### Update
 - `db.item.update({}, {$addToSet:{shops: ["BestBuy","Amazon", "Walmart"]}})` : Only update one item
-- `db.item.updateMany({}, {$addToSet:{shops: ["BestBuy","Amazon", "Walmart"]}})` : Update multiple items
+- `db.item.updateMany({}, {$addToSet:{shops: {$each:["BestBuy","Amazon", "Walmart"]}}})` : Update multiple items
 - `db.item.update({name:"games"}, {$push: {shops: 'gamestop'}})` : add to array
 - `db.item.update({name:"games"}, {$pull: {shops: 'gamestop'}})` : remove from array
 - `db.item.updateMany({}, {$inc: {price: 1}})` : increment 
