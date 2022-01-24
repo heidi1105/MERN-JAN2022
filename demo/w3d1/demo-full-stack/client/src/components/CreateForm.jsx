@@ -16,14 +16,13 @@ const CreateForm = (props) => {
   const submitHandler = (e) =>{
     e.preventDefault()
     axios.post(`http://localhost:8000/api/demos`, {title, stack, difficulty, rewatched})
-      .then(res=>{
+      .then(res=>{ //SUCCESSFUL 
         setTitle("")
         setStack("")
         setDifficulty(0)
         reloadList()
       })
       .catch(err=>console.log(err))
-
   }
 
   return <fieldset>

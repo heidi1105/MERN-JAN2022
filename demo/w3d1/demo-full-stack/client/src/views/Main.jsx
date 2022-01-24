@@ -23,10 +23,15 @@ const Main = () => {
       <legend> Main.jsx</legend>
         <h1> Message from backend: {message}</h1>
 
-        <CreateForm reloadList ={reloadList}/>
+        <CreateForm reloadList ={reloadList} />
         <DisplayTable refresh={refresh}/>
 
   </fieldset>;
 };
 
 export default Main;
+// child to talk to parent (parent need to give them a method)
+// pass down reloadList() to CreateForm
+// CreateForm : onSubmit, use reloadList() to trigger parent method
+// Parent method changed refresh state
+// pass the refresh state to Display useEffect so that the display will refresh
