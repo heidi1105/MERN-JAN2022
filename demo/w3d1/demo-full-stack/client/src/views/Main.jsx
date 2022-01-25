@@ -24,7 +24,7 @@ const Main = () => {
         <h1> Message from backend: {message}</h1>
 
         <CreateForm reloadList ={reloadList} />
-        <DisplayTable refresh={refresh}/>
+        <DisplayTable refresh={refresh} reloadList ={reloadList}/>
 
   </fieldset>;
 };

@@ -1,4 +1,9 @@
-const Demo = require("../models/demo.model")
+// option 1
+// const Demo = require("../models/demo.model")
+
+// option 2
+const {Demo} = require("../models/demo.model")
+
 
 module.exports.index = (req, res) =>{
     res.json({message:"meow"})
@@ -12,6 +17,11 @@ module.exports.allDemos = (req, res) =>{
 }
 
 // SHOW ONE
+module.exports.oneDemo = (req, res) =>{
+    Demo.findOne({_id: req.params.id})
+        .then(demo => res.json(demo))
+        .catch(err=>res.json(err))
+}
 
 // CREATE
 module.exports.addDemo = (req, res) =>{
@@ -20,8 +30,20 @@ module.exports.addDemo = (req, res) =>{
         .catch(err => res.json(err))
 }
 
+// UPDATE (SHOW ONE + CREATE)
+module.exports.updateDemo = (req, res) =>{
+    Demo.findOneAndUpdate({_id: req.params.id}, //find that demo
+        req.body, // modified content
+        { new: true, runValidators: true } // run validations on update
+    )
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+}
 
-
-// UPDATE
 
 // DELETE
+module.exports.deleteDemo = (req, res) =>{
+    Demo.deleteOne({_id: req.params.id})
+        .then(deleteConfirmation => res.json(deleteConfirmation))
+        .catch(err=>res.json(err))
+}

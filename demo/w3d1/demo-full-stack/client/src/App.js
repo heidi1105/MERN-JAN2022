@@ -1,5 +1,6 @@
 import {BrowserRouter, Switch, Route} from "react-router-dom"
 import Detail from "./views/Detail";
+import Edit from "./views/Edit";
 import Main from "./views/Main";
 
 function App() {
@@ -7,7 +8,10 @@ function App() {
     <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/demos/:id">
+            <Route exact path="/demos/:id/edit">
+              <Edit />
+            </Route>
+            <Route exact path="/demos/:id">
               <Detail />
             </Route>
             <Route exact path="/">

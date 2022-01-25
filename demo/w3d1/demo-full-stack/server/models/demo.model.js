@@ -20,6 +20,10 @@ const DemoSchema = new mongoose.Schema({
     rewatched: Boolean
 }, {timestamps:true})
 
-const Demo = mongoose.model('Demo', DemoSchema)
+// option 1
+// const Demo = mongoose.model('Demo', DemoSchema)
+// module.exports = Demo
 
-module.exports = Demo
+// option 2
+module.exports.Demo = mongoose.model('Demo', DemoSchema);
+
