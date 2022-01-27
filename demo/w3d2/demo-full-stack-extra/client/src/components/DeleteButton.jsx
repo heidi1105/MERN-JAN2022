@@ -4,7 +4,7 @@ import {useHistory} from "react-router-dom"
 
 const DeleteButton = (props) => {
   const {id,deleteHandler } = props
-  const history = useHistory()
+
 
   const clickHandler = ()=>{
     axios.delete(`http://localhost:8000/api/demos/${id}`)
