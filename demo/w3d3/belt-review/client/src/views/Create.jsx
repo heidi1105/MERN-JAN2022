@@ -13,9 +13,7 @@ const Create = () => {
   const submitHandler = (e) =>{
     e.preventDefault()
     axios.post(`http://localhost:8000/api/jobs`, {title, salary, company, remote})
-      .then(res=> {
-        history.push("/")
-      })
+      .then(res=> {history.push("/")})  //successful
       .catch(err=>{
         const errResponse = err.response.data.errors //errReponse: obj with keys
         let tempArr =[]

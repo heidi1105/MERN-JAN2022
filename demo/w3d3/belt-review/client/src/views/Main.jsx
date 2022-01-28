@@ -7,6 +7,8 @@ const Main = () => {
     const [jobs, setJobs] = useState(null)
     const [refresh, setRefresh] = useState(false)
 
+    //refresh 
+
     useEffect(()=>{
         axios.get(`http://localhost:8000/api/jobs/`)
             .then(res => setJobs(res.data))
@@ -54,6 +56,7 @@ const Main = () => {
 
                 </tbody>
             </table>
+            <button onClick={e=>setRefresh(!refresh)}>Click me to reset</button>
         </div>
     )
 }
