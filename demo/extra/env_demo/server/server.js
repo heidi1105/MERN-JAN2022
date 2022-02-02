@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
+// ENVIRONMENT VARIABLE 
 require('dotenv').config()
 
 
